@@ -19,8 +19,6 @@ def post_detail_ad(request, pk):
     post_ad = get_object_or_404(Post_Admin, pk=pk)
     return render(request, 'blog/post_detail_ad.html', {'post_ad': post_ad})
 
-    
-
 def post_detail_pg(request, pk):
     post_pg = get_object_or_404(Post_Program, pk=pk)
     return render(request, 'blog/post_detail_pg.html', {'post_pg': post_pg})
