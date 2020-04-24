@@ -9,8 +9,8 @@ class Post_Admin(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-
-    def publish(self):
+    
+        def publish(self):
         self.published_date = timezone.now()
         self.save()
 
@@ -36,7 +36,7 @@ class Post_Program(models.Model):
 
 
 class Comment_ad(models.Model):
-	article = models.ForeignKey(Post_Admin, on_delete = models.CASCADE)
+	post_admin = models.ForeignKey(Post_Admin, on_delete = models.CASCADE)
 	author_name = models.CharField("ім'я автора", max_length = 50)
 	comment_text = models.CharField('текст коментаря', max_length = 200)
 
@@ -52,7 +52,7 @@ class Comment_ad(models.Model):
 
 
 class Comment_pg(models.Model):
-	article = models.ForeignKey(Post_Program, on_delete = models.CASCADE)
+	post_program = models.ForeignKey(Post_Program, on_delete = models.CASCADE)
 	author_name = models.CharField("ім'я автора", max_length = 50)
 	comment_text = models.CharField('текст коментаря', max_length = 200)
 

@@ -4,11 +4,14 @@ h1 a {
 }
 body {
     padding-left: 15px;
+    background: : #ECF6FF;
 }
+
+
 .page-header {
     background-color: #345069;
     margin-top: 0;
-    padding: 20px 20px 20px 50px;
+    padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -19,6 +22,7 @@ body {
 
 .content {
     margin-left: 40px;
+     
 }
 
 h1, h2, h3, h4 {
@@ -46,7 +50,7 @@ h1, h2, h3, h4 {
 
 .post_admin {
     margin-bottom: 70px;
-    background-color: #CDD1D4;
+    
 }
 
 .post_admin h1 a, .post_admin h1 a:visited {
@@ -54,7 +58,7 @@ h1, h2, h3, h4 {
 }
 .post_program {
     margin-bottom: 70px;
-    background-color: #CDD1D4;
+    
 }
 
 .post_program h1 a, .post_admin h1 a:visited {
@@ -64,4 +68,22 @@ h1, h2, h3, h4 {
     margin-top: 20px;
     padding: 0;
     list-style: none;
+}
+.navbar{ 
+    margin-top: 0;
+}
+.nav-link , .navbar-brand{ color: #f4f4f4; cursor: pointer;}
+.nav-link{ margin-right: 1em !important;}
+.nav-link:hover{ background: #f4f4f4; color: #f97300; }
+.navbar-collapse{ justify-content: flex-end;}
+.navbar-toggler{  background:#fff !important;}
+
+.navbar-collapse{
+ justify-content: flex-end;
+}
+.bg-dark{
+background-color:#345069!important
+}
+.bg-primary{
+background-color:#007bff!important
 }

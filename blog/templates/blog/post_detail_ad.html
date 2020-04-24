@@ -10,4 +10,16 @@
         <h1>{{ post_ad.title }}</h1>
         <p>{{ post_ad.text|linebreaksbr }}</p>
     </div>
+
+    <hr>
+<form action="" method="POST">
+
+	{% csrf_token %}
+	
+	<input type="text" required placeholder ="Ваше ім'я" name="name"><br>
+	<textarea name="text" required="" placeholder="Текст коментаря" cols="30" rows="10"></textarea><br>
+
+	<button type="submit">Залишити коментар</button>
+
+</form>
 {% endblock %}

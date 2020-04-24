@@ -6,20 +6,42 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <title>SYSadmin</title>
+         <style>
+   body{
+    background-color: #ECF6FF; /* Цвет фона веб-страницы */
+   }
+
+   .page-header {
+      margin-top: 0;
+      box-shadow: 0px 7px 5px rgba(0,0,0,0.6); /* Тень */
+      padding: 5px; /* Поля вокруг текста */
+      border-radius: 4px; /* Радиус скругления */
+       /* Цвет фона */
+
+                }
+
+ </style>
     </head>
     <body>
     <div class="page-header">
         <h1><a href="/">SYSadmin</a></h1>
     </div>
+
+  
+
+
      <div class="container-fluid">
 
     <div class="row">
       <div class="col-sm-2">
       {% block sidebar %}
       <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}"><h4>Головна</h4></a></li>
-          <li><a href="{% url 'post_admin' %}"><h4>Адміністрування</h4></a></li>
-          <li><a href="{% url 'post_program' %}"><h4>Програмування</h4></a></li>
+        
+       
+
+       <li><a href="{% url 'index' %}"><h4><button type="button" class="btn btn-primary">Головна</button></h4></li>
+          <li><a href="{% url 'post_admin' %}"><h4><button type="button" class="btn btn-primary">Адміністрування</button></h4></a></li>
+          <li><a href="{% url 'post_program' %}"><h4><button type="button" class="btn btn-primary">Програмування</button></h4></a></li>
       </ul>
      {% endblock %}
       </div>
