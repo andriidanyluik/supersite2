@@ -8,7 +8,7 @@ body {
 .page-header {
     background-color: #345069;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 20px 50px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -46,6 +46,7 @@ h1, h2, h3, h4 {
 
 .post_admin {
     margin-bottom: 70px;
+    background-color: #CDD1D4;
 }
 
 .post_admin h1 a, .post_admin h1 a:visited {
@@ -53,6 +54,7 @@ h1, h2, h3, h4 {
 }
 .post_program {
     margin-bottom: 70px;
+    background-color: #CDD1D4;
 }
 
 .post_program h1 a, .post_admin h1 a:visited {

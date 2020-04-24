@@ -31,3 +31,34 @@ class Post_Program(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+
+class Comment_ad(models.Model):
+	article = models.ForeignKey(Post_Admin, on_delete = models.CASCADE)
+	author_name = models.CharField("ім'я автора", max_length = 50)
+	comment_text = models.CharField('текст коментаря', max_length = 200)
+
+	def __str__(self):
+		return self.author_name
+
+	class Meta:
+		verbose_name = 'Коментар'
+		verbose_name_plural = 'Коментарі'
+
+
+
+
+
+class Comment_pg(models.Model):
+	article = models.ForeignKey(Post_Program, on_delete = models.CASCADE)
+	author_name = models.CharField("ім'я автора", max_length = 50)
+	comment_text = models.CharField('текст коментаря', max_length = 200)
+
+	def __str__(self):
+		return self.author_name
+
+	class Meta:
+		verbose_name = 'Коментар'
+		verbose_name_plural = 'Коментарі'
