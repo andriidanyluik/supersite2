@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <title>SYSadmin</title>
+    </head>
+    <body>
+    <div class="page-header">
+        <h1><a href="/">SYSadmin</a></h1>
+    </div>
+     <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-2">
+      {% block sidebar %}
+      <ul class="sidebar-nav">
+          <li><a href="{% url 'index' %}"><h4>Головна</h4></a></li>
+          <li><a href="{% url 'post_admin' %}"><h4>Адміністрування</h4></a></li>
+          <li><a href="{% url 'post_program' %}"><h4>Програмування</h4></a></li>
+      </ul>
+     {% endblock %}
+      </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

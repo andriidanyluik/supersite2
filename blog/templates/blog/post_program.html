@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+{% for post_program in posts_pg %}
+    <div>
+        <p>published: {{ post_program.published_date }}</p>
+        <h1><a href="{% url 'post_detail_pg' pk=post_program.pk %}">{{ post_program.title }}</a></h1>
+        <p>{{ post_program.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+    
+
+{% endblock %}

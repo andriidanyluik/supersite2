@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+       
+<p>Статті про Адміністрування</p>
+
+{% for post_admin in posts_ad %}
+    <div>
+        <p>published: {{ post_admin.published_date }}</p>
+        <h1><a href="{% url 'post_detail_ad' pk=post_admin.pk %}">{{ post_admin.title }}</a></h1>
+        <p>{{ post_admin.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+{% endblock %}

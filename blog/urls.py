@@ -1,0 +1,10 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+	path('', views.index, name='index'),
+    path('post_admin', views.post_admin, name='post_admin'),
+    path('post_program', views.post_program, name='post_program'),
+    path('post_admin/<int:pk>/', views.post_detail_ad, name='post_detail_ad'),
+    path('post_program/<int:pk>/', views.post_detail_pg, name='post_detail_pg'),
+]
