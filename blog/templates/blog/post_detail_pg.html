@@ -11,4 +11,15 @@
         <p>{{ post_pg.text|linebreaksbr }}</p>
     </div>
 
+
+<form action="" method="POST">
+
+	{% csrf_token %}
+	
+	<input type="text" required placeholder ="Ваше ім'я" name="name"><br>
+	<textarea name="text" required="" placeholder="Текст коментаря" cols="30" rows="10"></textarea><br>
+
+	<button type="submit">Залишити коментар</button>
+
+</form>
 {% endblock %}

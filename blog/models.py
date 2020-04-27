@@ -62,3 +62,4 @@ class Comment_pg(models.Model):
 	class Meta:
 		verbose_name = 'Коментар'
 		verbose_name_plural = 'Коментарі'
+        

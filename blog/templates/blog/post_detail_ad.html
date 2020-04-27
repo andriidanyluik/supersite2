@@ -10,9 +10,12 @@
         <h1>{{ post_ad.title }}</h1>
         <p>{{ post_ad.text|linebreaksbr }}</p>
     </div>
+<hr>
+
+
 
     <hr>
-<form action="" method="POST">
+<form action="post_admin/<int:pk>/leave_comment_ad" method="POST">
 
 	{% csrf_token %}
 	
