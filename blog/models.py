@@ -44,8 +44,8 @@ class Comment_ad(models.Model):
 		return self.author_name
 
 	class Meta:
-		verbose_name = 'Коментар'
-		verbose_name_plural = 'Коментарі'
+		verbose_name = 'Коментар AD'
+		verbose_name_plural = 'Коментарі AD'
 
 
 
@@ -60,6 +60,6 @@ class Comment_pg(models.Model):
 		return self.author_name
 
 	class Meta:
-		verbose_name = 'Коментар'
-		verbose_name_plural = 'Коментарі'
+		verbose_name = 'Коментар PG'
+		verbose_name_plural = 'Коментарі PG'
         

@@ -10,9 +10,21 @@
         <h1>{{ post_pg.title }}</h1>
         <p>{{ post_pg.text|linebreaksbr }}</p>
     </div>
+<hr>
+{% if leave_comment_pg_list %}
+    {% for c in leave_comment_pg_list %}
+        <p>
+            <strong>{{c.author_name}}</strong>
+            <p>{{c.comment_text}}</p>
+        </p>
+        
+    {% endfor %}
+{% else %}
+Коментарів немає!
+{% endif %}
+<hr>
 
-
-<form action="" method="POST">
+<form action="/leave_comment_pg/" method="POST">
 
 	{% csrf_token %}
 	
